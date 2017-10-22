@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E178C0B9A361C623C741167 /* libPods-PipelineViolationApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA2B282B77D65554160FFA8 /* libPods-PipelineViolationApp.a */; };
 		6D0FDC521F6F62CA00502502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC511F6F62CA00502502 /* AppDelegate.swift */; };
-		6D0FDC541F6F62CA00502502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC531F6F62CA00502502 /* ViewController.swift */; };
+		6D0FDC541F6F62CA00502502 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC531F6F62CA00502502 /* HomeViewController.swift */; };
 		6D0FDC571F6F62CA00502502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC551F6F62CA00502502 /* Main.storyboard */; };
 		6D0FDC591F6F62CA00502502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC581F6F62CA00502502 /* Assets.xcassets */; };
 		6D0FDC5C1F6F62CA00502502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC5A1F6F62CA00502502 /* LaunchScreen.storyboard */; };
 		6D0FDC671F6F62CA00502502 /* PipelineViolationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC661F6F62CA00502502 /* PipelineViolationAppTests.swift */; };
 		6D0FDC721F6F62CA00502502 /* PipelineViolationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC711F6F62CA00502502 /* PipelineViolationAppUITests.swift */; };
+		6D0FDC831F6F644A00502502 /* Tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC821F6F644A00502502 /* Tips.png */; };
+		6D0FDC891F6F6A6A00502502 /* ListOfPipelineWhatCountsAsReportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC881F6F6A6A00502502 /* ListOfPipelineWhatCountsAsReportController.swift */; };
+		6D0FDC8B1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC8A1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png */; };
+		6D0FDC8D1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FDC8C1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png */; };
+		6D0FDC8F1F6F772E00502502 /* ListOfViolationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC8E1F6F772E00502502 /* ListOfViolationsController.swift */; };
+		6D62A0E11F7EFE8900417D20 /* ETRoverViolation.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D62A0E01F7EFE8800417D20 /* ETRoverViolation.png */; };
+		6DDF66131F70A7B200FDD801 /* ETRoverDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDF66121F70A7B200FDD801 /* ETRoverDocumentController.swift */; };
+		A919997E1F994A5C00316A50 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A919997D1F994A5C00316A50 /* MapController.swift */; };
+		A92C1EC91F9D47610047452A /* PinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C1EC81F9D47610047452A /* PinController.swift */; };
+		A948F96B1F896AC000677A28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A948F96A1F896AC000677A28 /* CoreLocation.framework */; };
+		A94DB22D1F992235008229F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A94DB22C1F992235008229F1 /* GoogleService-Info.plist */; };
+		A9BCF2311F97CACF00C7CA47 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BCF2301F97CACF00C7CA47 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381979FBCAE5F32AE66EF126 /* Pods-PipelineViolationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipelineViolationApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PipelineViolationApp/Pods-PipelineViolationApp.release.xcconfig"; sourceTree = "<group>"; };
+		5EF8EC93A158C04A194C36DD /* Pods-PipelineViolationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipelineViolationApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PipelineViolationApp/Pods-PipelineViolationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0FDC4E1F6F62CA00502502 /* PipelineViolationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipelineViolationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0FDC511F6F62CA00502502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D0FDC531F6F62CA00502502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D0FDC531F6F62CA00502502 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6D0FDC561F6F62CA00502502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D0FDC581F6F62CA00502502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D0FDC5B1F6F62CA00502502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +62,19 @@
 		6D0FDC6D1F6F62CA00502502 /* PipelineViolationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipelineViolationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D0FDC711F6F62CA00502502 /* PipelineViolationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineViolationAppUITests.swift; sourceTree = "<group>"; };
 		6D0FDC731F6F62CA00502502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D0FDC821F6F644A00502502 /* Tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tips.png; sourceTree = "<group>"; };
+		6D0FDC881F6F6A6A00502502 /* ListOfPipelineWhatCountsAsReportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfPipelineWhatCountsAsReportController.swift; sourceTree = "<group>"; };
+		6D0FDC8A1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ET Rover Violation Guidline (pg. 1).png"; sourceTree = "<group>"; };
+		6D0FDC8C1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ET Rover Violation Guidline (pg. 2).png"; sourceTree = "<group>"; };
+		6D0FDC8E1F6F772E00502502 /* ListOfViolationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfViolationsController.swift; sourceTree = "<group>"; };
+		6D62A0E01F7EFE8800417D20 /* ETRoverViolation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ETRoverViolation.png; sourceTree = SOURCE_ROOT; };
+		6DDF66121F70A7B200FDD801 /* ETRoverDocumentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETRoverDocumentController.swift; sourceTree = "<group>"; };
+		A919997D1F994A5C00316A50 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		A92C1EC81F9D47610047452A /* PinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinController.swift; sourceTree = "<group>"; };
+		A948F96A1F896AC000677A28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A94DB22C1F992235008229F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9BCF2301F97CACF00C7CA47 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		EDA2B282B77D65554160FFA8 /* libPods-PipelineViolationApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PipelineViolationApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A948F96B1F896AC000677A28 /* CoreLocation.framework in Frameworks */,
+				4E178C0B9A361C623C741167 /* libPods-PipelineViolationApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +111,8 @@
 				6D0FDC651F6F62CA00502502 /* PipelineViolationAppTests */,
 				6D0FDC701F6F62CA00502502 /* PipelineViolationAppUITests */,
 				6D0FDC4F1F6F62CA00502502 /* Products */,
+				A948F9691F896ABF00677A28 /* Frameworks */,
+				DA1CB2DC76E93D8C74A05224 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +130,18 @@
 			isa = PBXGroup;
 			children = (
 				6D0FDC511F6F62CA00502502 /* AppDelegate.swift */,
-				6D0FDC531F6F62CA00502502 /* ViewController.swift */,
+				6DDF66121F70A7B200FDD801 /* ETRoverDocumentController.swift */,
+				6D0FDC531F6F62CA00502502 /* HomeViewController.swift */,
+				6D0FDC881F6F6A6A00502502 /* ListOfPipelineWhatCountsAsReportController.swift */,
+				6D0FDC8E1F6F772E00502502 /* ListOfViolationsController.swift */,
+				A919997D1F994A5C00316A50 /* MapController.swift */,
+				A92C1EC81F9D47610047452A /* PinController.swift */,
 				6D0FDC551F6F62CA00502502 /* Main.storyboard */,
 				6D0FDC581F6F62CA00502502 /* Assets.xcassets */,
 				6D0FDC5A1F6F62CA00502502 /* LaunchScreen.storyboard */,
 				6D0FDC5D1F6F62CA00502502 /* Info.plist */,
+				A94DB22C1F992235008229F1 /* GoogleService-Info.plist */,
+				6D0FDC7F1F6F635E00502502 /* images */,
 			);
 			path = PipelineViolationApp;
 			sourceTree = "<group>";
@@ -125,6 +164,36 @@
 			path = PipelineViolationAppUITests;
 			sourceTree = "<group>";
 		};
+		6D0FDC7F1F6F635E00502502 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6D0FDC8C1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png */,
+				6D62A0E01F7EFE8800417D20 /* ETRoverViolation.png */,
+				6D0FDC8A1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png */,
+				A9BCF2301F97CACF00C7CA47 /* logo.png */,
+				6D0FDC821F6F644A00502502 /* Tips.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		A948F9691F896ABF00677A28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A948F96A1F896AC000677A28 /* CoreLocation.framework */,
+				EDA2B282B77D65554160FFA8 /* libPods-PipelineViolationApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1CB2DC76E93D8C74A05224 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EF8EC93A158C04A194C36DD /* Pods-PipelineViolationApp.debug.xcconfig */,
+				381979FBCAE5F32AE66EF126 /* Pods-PipelineViolationApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D0FDC761F6F62CA00502502 /* Build configuration list for PBXNativeTarget "PipelineViolationApp" */;
 			buildPhases = (
+				1E37984190EE9AD6E8518092 /* [CP] Check Pods Manifest.lock */,
 				6D0FDC4A1F6F62CA00502502 /* Sources */,
 				6D0FDC4B1F6F62CA00502502 /* Frameworks */,
 				6D0FDC4C1F6F62CA00502502 /* Resources */,
+				E8C77D4E52AED8F99C312D54 /* [CP] Embed Pods Frameworks */,
+				62C47EB3A1EEE788366C5163 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +265,7 @@
 				TargetAttributes = {
 					6D0FDC4D1F6F62CA00502502 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JG93VCUS8R;
 						ProvisioningStyle = Automatic;
 					};
 					6D0FDC611F6F62CA00502502 = {
@@ -234,6 +307,12 @@
 			files = (
 				6D0FDC5C1F6F62CA00502502 /* LaunchScreen.storyboard in Resources */,
 				6D0FDC591F6F62CA00502502 /* Assets.xcassets in Resources */,
+				A94DB22D1F992235008229F1 /* GoogleService-Info.plist in Resources */,
+				6D0FDC8B1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png in Resources */,
+				6D62A0E11F7EFE8900417D20 /* ETRoverViolation.png in Resources */,
+				A9BCF2311F97CACF00C7CA47 /* logo.png in Resources */,
+				6D0FDC831F6F644A00502502 /* Tips.png in Resources */,
+				6D0FDC8D1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png in Resources */,
 				6D0FDC571F6F62CA00502502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,13 +333,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E37984190EE9AD6E8518092 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PipelineViolationApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C47EB3A1EEE788366C5163 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PipelineViolationApp/Pods-PipelineViolationApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8C77D4E52AED8F99C312D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PipelineViolationApp/Pods-PipelineViolationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D0FDC4A1F6F62CA00502502 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0FDC541F6F62CA00502502 /* ViewController.swift in Sources */,
+				6D0FDC8F1F6F772E00502502 /* ListOfViolationsController.swift in Sources */,
+				6D0FDC541F6F62CA00502502 /* HomeViewController.swift in Sources */,
+				6D0FDC891F6F6A6A00502502 /* ListOfPipelineWhatCountsAsReportController.swift in Sources */,
 				6D0FDC521F6F62CA00502502 /* AppDelegate.swift in Sources */,
+				A919997E1F994A5C00316A50 /* MapController.swift in Sources */,
+				A92C1EC91F9D47610047452A /* PinController.swift in Sources */,
+				6DDF66131F70A7B200FDD801 /* ETRoverDocumentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,25 +547,31 @@
 		};
 		6D0FDC771F6F62CA00502502 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF8EC93A158C04A194C36DD /* Pods-PipelineViolationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JG93VCUS8R;
 				INFOPLIST_FILE = PipelineViolationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PipelineViolationApp.PipelineViolationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6D0FDC781F6F62CA00502502 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 381979FBCAE5F32AE66EF126 /* Pods-PipelineViolationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JG93VCUS8R;
 				INFOPLIST_FILE = PipelineViolationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PipelineViolationApp.PipelineViolationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -507,6 +648,7 @@
 				6D0FDC781F6F62CA00502502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D0FDC791F6F62CA00502502 /* Build configuration list for PBXNativeTarget "PipelineViolationAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +657,7 @@
 				6D0FDC7B1F6F62CA00502502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D0FDC7C1F6F62CA00502502 /* Build configuration list for PBXNativeTarget "PipelineViolationAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +666,7 @@
 				6D0FDC7E1F6F62CA00502502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

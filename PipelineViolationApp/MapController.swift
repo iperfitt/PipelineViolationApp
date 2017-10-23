@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
+import FirebaseDatabase
 
 class MapController: UIViewController {
     
@@ -16,19 +18,18 @@ class MapController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        let location = CLLocationCoordinate2DMake(42.2808, -83.7430)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "mamamiapizzapie"
-        annotation.subtitle = "Luna Rosa"
-        Map.addAnnotation(annotation)
-        
+        let ref = Database.database().reference().child("PINS")
+        ref.observe(DataEventType.value, with:{ (snapshot) in
+            if snapshot.childrenCount > 0 {
+                for pin in snapshot.children.allObjects as![DataSnapshot] {
+                    let pinObject = pin.value as? [String: AnyObject]
+                    let CLLCoordType = CLLocationCoordinate2D(latitude: pinObject?["latitude"] as! CLLocationDegrees, longitude: pinObject?["longitude"] as! CLLocationDegrees)
+                    let anno = MKPointAnnotation()
+                    anno.coordinate = CLLCoordType
+                    anno.title = pinObject!["message"] as! String
+                    self.Map.addAnnotation(anno)
+                }
+            }
+        })
     }
-    
-    
-    
-    
-    
 }

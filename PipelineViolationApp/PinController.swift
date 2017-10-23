@@ -11,7 +11,7 @@ import CoreLocation
 import Firebase
 import FirebaseDatabase
 
-class PinController: UIViewController {
+class PinController: UIViewController, CLLocationManagerDelegate {
     
     var latitude = 0.0
     
@@ -52,6 +52,10 @@ class PinController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SavedPin.isHidden = true
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
     }
     
     override func touchesBegan(_ touches: Set <UITouch>, with event: UIEvent?) {

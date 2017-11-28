@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import PipelineViolationApp
 
 class PipelineViolationAppTests: XCTestCase {
     

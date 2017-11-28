@@ -38,6 +38,7 @@ class PinController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func SavePin(_ sender: Any) {
         let message = PinMessage.text
+        //Create post for to add to Firebase database
         let post : [String : AnyObject] = ["message": message as AnyObject,
                                            "latitude": latitude as AnyObject,
                                            "longitude": longitude as AnyObject]
@@ -54,12 +55,12 @@ class PinController: UIViewController, CLLocationManagerDelegate {
         SavedPin.isHidden = true
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
+        //Requests permission to use location services while the app is in the foreground.
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
     
     override func touchesBegan(_ touches: Set <UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        
     }
 }

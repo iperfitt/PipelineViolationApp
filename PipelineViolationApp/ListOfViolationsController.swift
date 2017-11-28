@@ -14,13 +14,11 @@ var myIndex2 = 0
 class ListOfViolationsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return pipelineNames2.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
-        cell.textLabel?.text = pipelineNames2[indexPath.row]
         return cell
     }
     

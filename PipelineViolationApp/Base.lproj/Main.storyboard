@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-wW-ijw">
-                                <rect key="frame" x="0.0" y="190" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="190" width="375" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX6-ly-cEt">
-                                <rect key="frame" x="0.0" y="374" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="366" width="375" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yae-cX-z3i">
-                                <rect key="frame" x="0.0" y="468" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="452" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -84,22 +84,36 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="123.68815592203899"/>
         </scene>
-        <!--List Of Violations Controller-->
+        <!--Choose Pipelilne-->
         <scene sceneID="0zK-A9-d6z">
             <objects>
-                <tableViewController id="l4S-EZ-da9" customClass="ListOfViolationsController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q9V-af-7TS">
+                <tableViewController title="Choose Pipelilne" id="l4S-EZ-da9" customClass="ListOfViolationsController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="213" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q9V-af-7TS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="D65-oo-rVi">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="213" id="D65-oo-rVi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D65-oo-rVi" id="Lqk-VF-9BG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="212.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ET Rover Image.png" translatesAutoresizingMaskIntoConstraints="NO" id="a26-dB-jmJ">
+                                            <rect key="frame" x="0.0" y="8" width="375" height="196"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="a26-dB-jmJ" secondAttribute="bottom" constant="8.5" id="Jzg-0T-iuu"/>
+                                        <constraint firstItem="a26-dB-jmJ" firstAttribute="top" secondItem="Lqk-VF-9BG" secondAttribute="top" constant="8" id="lFw-vh-LPc"/>
+                                        <constraint firstAttribute="trailing" secondItem="a26-dB-jmJ" secondAttribute="trailing" id="s6q-qc-c5e"/>
+                                        <constraint firstItem="a26-dB-jmJ" firstAttribute="leading" secondItem="Lqk-VF-9BG" secondAttribute="leading" id="vOG-lk-rht"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -113,12 +127,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s41-JR-eqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607" y="1078"/>
+            <point key="canvasLocation" x="605.60000000000002" y="1077.2113943028487"/>
         </scene>
-        <!--ET Rover Document Controller-->
+        <!--Report Document-->
         <scene sceneID="bGM-xx-XQv">
             <objects>
-                <viewController title="ET Rover Document Controller" id="vSM-5R-xX2" customClass="ETRoverDocumentController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Report Document" id="vSM-5R-xX2" customClass="ETRoverDocumentController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IJk-cx-DFu"/>
                         <viewControllerLayoutGuide type="bottom" id="Mw6-rj-nhk"/>
@@ -130,11 +144,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ETRoverViolation.png" translatesAutoresizingMaskIntoConstraints="NO" id="bBD-nv-rsw">
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfY-4G-Zhq">
-                                <rect key="frame" x="132" y="85" width="76" height="30"/>
+                                <rect key="frame" x="0.0" y="85" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send Email"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Send Email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="SendEmail:" destination="vSM-5R-xX2" eventType="touchUpInside" id="1ro-QB-LIC"/>
                                 </connections>
@@ -200,15 +219,6 @@
                                     <action selector="Equipment_textChange:" destination="vSM-5R-xX2" eventType="editingChanged" id="u1j-Y0-87m"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZv-UH-ERm">
-                                <rect key="frame" x="32" y="398" width="145" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="TakePhoto:" destination="vSM-5R-xX2" eventType="touchUpInside" id="I1i-yr-QTg"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uCk-8v-RpU">
                                 <rect key="frame" x="32" y="285" width="309" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -220,12 +230,27 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISL-HC-cIS">
-                                <rect key="frame" x="182" y="403" width="169" height="30"/>
+                                <rect key="frame" x="0.0" y="446" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Import Image"/>
+                                <state key="normal" title="Import Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="importImage:" destination="vSM-5R-xX2" eventType="touchUpInside" id="efW-ki-U35"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZv-UH-ERm">
+                                <rect key="frame" x="0.0" y="401" width="375" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TakePhoto:" destination="vSM-5R-xX2" eventType="touchUpInside" id="I1i-yr-QTg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svP-wQ-rYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="1933"/>
+            <point key="canvasLocation" x="848.79999999999995" y="1932.6836581709147"/>
         </scene>
         <!--Pin Controller-->
         <scene sceneID="aYf-tD-IuO">
@@ -285,12 +310,19 @@
                                     <action selector="SavePin:" destination="SX1-XB-YsB" eventType="touchUpInside" id="bO9-o2-hQj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yout Pin Has Been Saved!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-Cj-Liz">
-                                <rect key="frame" x="0.0" y="182" width="375" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your pin has been saved! Go back to the home screen and click 'Map of Reports' to view your pin." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-Cj-Liz">
+                                <rect key="frame" x="0.0" y="159" width="376" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="**Once you save a pin you will not be able to delete that pin so make sure your message is correct." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NV-bf-UvZ">
+                                <rect key="frame" x="55" y="408" width="264" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -307,21 +339,32 @@
             </objects>
             <point key="canvasLocation" x="1728.8" y="1932.6836581709147"/>
         </scene>
-        <!--List Of Pipeline What Counts As Report Controller-->
+        <!--Choose Pipeline-->
         <scene sceneID="yBo-SO-1Ev">
             <objects>
-                <tableViewController id="YNS-Sj-k9W" customClass="ListOfPipelineWhatCountsAsReportController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dSw-MR-wWc">
+                <tableViewController title="Choose Pipeline" id="YNS-Sj-k9W" customClass="ListOfPipelineWhatCountsAsReportController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="204" sectionHeaderHeight="28" sectionFooterHeight="28" id="dSw-MR-wWc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="lq5-Pv-KkF">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="204" id="lq5-Pv-KkF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="204"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lq5-Pv-KkF" id="RA5-K3-qhV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="203.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ET Rover Image.png" translatesAutoresizingMaskIntoConstraints="NO" id="XXw-ev-HyT">
+                                            <rect key="frame" x="0.0" y="18" width="375" height="167"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="XXw-ev-HyT" secondAttribute="bottom" constant="18.5" id="7g8-KZ-dpe"/>
+                                        <constraint firstItem="XXw-ev-HyT" firstAttribute="leading" secondItem="RA5-K3-qhV" secondAttribute="leading" id="A9Y-KC-6cz"/>
+                                        <constraint firstAttribute="trailing" secondItem="XXw-ev-HyT" secondAttribute="trailing" id="XoK-Y2-7BX"/>
+                                        <constraint firstItem="XXw-ev-HyT" firstAttribute="top" secondItem="RA5-K3-qhV" secondAttribute="top" constant="18" id="heR-zs-E4N"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -336,7 +379,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDY-QH-dsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="944"/>
+            <point key="canvasLocation" x="2048.8000000000002" y="943.17841079460277"/>
         </scene>
         <!--ET Rover Violation Guidelines-->
         <scene sceneID="yMe-5k-V9Y">
@@ -432,10 +475,10 @@
             </objects>
             <point key="canvasLocation" x="-697" y="124"/>
         </scene>
-        <!--Map Controller-->
+        <!--Map of Reports-->
         <scene sceneID="3wc-zv-mzK">
             <objects>
-                <viewController id="dc6-fX-8z4" customClass="MapController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map of Reports" id="dc6-fX-8z4" customClass="MapController" customModule="PipelineViolationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9iu-EJ-VIO"/>
                         <viewControllerLayoutGuide type="bottom" id="jdd-gs-uH8"/>
@@ -466,6 +509,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ET Rover Image.png" width="1280" height="555"/>
         <image name="ET Rover Violation Guidline (pg. 1).png" width="505" height="695"/>
         <image name="ET Rover Violation Guidline (pg. 2).png" width="487" height="237"/>
         <image name="ETRoverViolation.png" width="565" height="696"/>

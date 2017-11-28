@@ -12,18 +12,19 @@ var pipelineNames = ["ET Rover"]
 var myIndex = 0
 
 class ListOfPipelineWhatCountsAsReportController: UITableViewController {
-
+    
+    //Tells the data source to return the number of rows in a given section of a table view.
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return pipelineNames.count
     }
 
-    
+    //Asks the data source for a cell to insert in a particular location of the table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Returns a reusable table-view cell object for the specified reuse identifier and adds it to the table.
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = pipelineNames[indexPath.row]
         return cell
     }
+    //Tells the delegate that the specified row is now selected.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         performSegue(withIdentifier: "ETRoverViolationGuidelines", sender: self)

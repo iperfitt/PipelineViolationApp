@@ -26,6 +26,7 @@
 		A92C1EC91F9D47610047452A /* PinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C1EC81F9D47610047452A /* PinController.swift */; };
 		A948F96B1F896AC000677A28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A948F96A1F896AC000677A28 /* CoreLocation.framework */; };
 		A94DB22D1F992235008229F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A94DB22C1F992235008229F1 /* GoogleService-Info.plist */; };
+		A9962F7D1FA8E2E70028D51D /* ET Rover Image.png in Resources */ = {isa = PBXBuildFile; fileRef = A9962F7C1FA8E2E70028D51D /* ET Rover Image.png */; };
 		A9BCF2311F97CACF00C7CA47 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BCF2301F97CACF00C7CA47 /* logo.png */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		A92C1EC81F9D47610047452A /* PinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinController.swift; sourceTree = "<group>"; };
 		A948F96A1F896AC000677A28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A94DB22C1F992235008229F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9962F7C1FA8E2E70028D51D /* ET Rover Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ET Rover Image.png"; sourceTree = "<group>"; };
 		A9BCF2301F97CACF00C7CA47 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		EDA2B282B77D65554160FFA8 /* libPods-PipelineViolationApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PipelineViolationApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 		6D0FDC7F1F6F635E00502502 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A9962F7C1FA8E2E70028D51D /* ET Rover Image.png */,
 				6D0FDC8C1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png */,
 				6D62A0E01F7EFE8800417D20 /* ETRoverViolation.png */,
 				6D0FDC8A1F6F6DDF00502502 /* ET Rover Violation Guidline (pg. 1).png */,
@@ -260,7 +263,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Perfitt, Ian";
 				TargetAttributes = {
 					6D0FDC4D1F6F62CA00502502 = {
@@ -313,6 +316,7 @@
 				A9BCF2311F97CACF00C7CA47 /* logo.png in Resources */,
 				6D0FDC831F6F644A00502502 /* Tips.png in Resources */,
 				6D0FDC8D1F6F6DE400502502 /* ET Rover Violation Guidline (pg. 2).png in Resources */,
+				A9962F7D1FA8E2E70028D51D /* ET Rover Image.png in Resources */,
 				6D0FDC571F6F62CA00502502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +464,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -468,7 +474,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -511,7 +521,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -519,7 +531,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -39,8 +39,7 @@ class ETRoverDocumentController: UIViewController, MFMailComposeViewControllerDe
     
     var attachedPhotos:[UIImage] = []
     
-    //Each text field function calls on maxLength
-    //with specific lenght limits on entered text
+    //Calls maxLength func on each text field on report document
     @IBAction func DateOfReport_textChange(_ sender: UITextField) {
         maxLength(textFieldName: DateOfReport, max: 15)
     }
@@ -72,28 +71,31 @@ class ETRoverDocumentController: UIViewController, MFMailComposeViewControllerDe
     
     //Limits the amount of characters allowed in a text field
     func maxLength(textFieldName: UITextField, max:Int) {
-        let length = textFieldName.text?.characters.count
-        let metin = textFieldName.text
+        //Length of input text
+        let length = textFieldName.text?.count
+        //Input text
+        let inText = textFieldName.text
         if (length! > max) {
-            //Returns an index that is the specified distance from the given index.
-            let index = metin?.index((metin?.startIndex)!, offsetBy: max)
-            //Chops the string to meet maximum length condition
+            //Returns index that is the specified distance from the given index.
+            let index = inText?.index((inText?.startIndex)!, offsetBy: max)
+            //Chops string to meet maximum length condition
             textFieldName.text = textFieldName.text?.substring(to: index!)
         }
     }
     
-    
+    //Draws users text to the report document at specific
+    //points on document and returns the new image
     func textToImage(drawText: NSString, inImage: UIImage, atPoint: CGPoint) -> UIImage {
         
-        //Setup the font specific variables
+        //Declare specific font variables
         let textColor: UIColor = UIColor.black
         let textFont: UIFont = UIFont(name: "Times New Roman", size: 12)!
         
-        //Setup the image context using the passed image
+        //Create the context of the passed image
         UIGraphicsBeginImageContext(inImage.size)
         
-        //Sets up the font attributes that will later be
-        //used to dictate how the text should be entered
+        //Set up the font attributes that will later be
+        //used to determine how the text should be entered
         let textFontAttributes = [NSFontAttributeName: textFont, NSForegroundColorAttributeName: textColor]
         
         //Put the image into a rectangle as large as the original image.
@@ -114,22 +116,8 @@ class ETRoverDocumentController: UIViewController, MFMailComposeViewControllerDe
         return newImage
     }
     
-    
-    
-    @IBAction func SendEmail(_ sender: Any) {
-        let mailComposeViewController = configureMailController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        }
-        else {
-            showMailError()
-        }
-        self.performSegue(withIdentifier: "PinSegue", sender: self)
-    }
-    
-    func configureMailController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self
+    //For each text field, write the text onto the report doc and return final image
+    func produceFinalImage() -> UIImage {
         var finalImage = textToImage(drawText: (DateOfReport.text!) as NSString, inImage: photo!, atPoint: CGPoint(x: 370, y: 58))
         finalImage = textToImage(drawText: (Description1.text!) as NSString, inImage: finalImage, atPoint: CGPoint(x: 50, y: 175))
         finalImage = textToImage(drawText: (Description2.text!) as NSString, inImage: finalImage, atPoint: CGPoint(x: 50, y: 193))
@@ -139,69 +127,106 @@ class ETRoverDocumentController: UIViewController, MFMailComposeViewControllerDe
         finalImage = textToImage(drawText: (RelatedEquipment.text!) as NSString, inImage: finalImage, atPoint: CGPoint(x: 275 , y: 280))
         finalImage = textToImage(drawText: String(round(1000*latitude)/1000) as NSString, inImage: finalImage, atPoint: CGPoint(x: 186, y: 328))
         finalImage = textToImage(drawText: String(round(1000*longitude)/1000) as NSString, inImage: finalImage, atPoint: CGPoint(x: 300, y: 328))
-        for pic in attachedPhotos {
-            mailComposerVC.addAttachmentData(UIImagePNGRepresentation(pic)!, mimeType: "image/png", fileName: "hello")
+        return finalImage
+    }
+    
+    
+    //Configures mail controller and displays mail view controller
+    @IBAction func SendEmail(_ sender: Any) {
+        let mailComposeViewController = configureMailController()
+        //check if current device is able to send email
+        if MFMailComposeViewController.canSendMail() {
+            //Display mail view controller
+            self.present(mailComposeViewController, animated: true, completion: nil)
         }
-        let imageData = UIImagePNGRepresentation(finalImage)
-        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "hello")
+        else {
+            //Display error
+            showMailError()
+        }
+        //After E-mail is sent, Direct user to create a Pin
+        self.performSegue(withIdentifier: "PinSegue", sender: self)
+    }
+    
+    
+    //Creates mail controller with all attached images and returns said controller
+    func configureMailController() -> MFMailComposeViewController {
+        //Create mail controller variable
+        let mailComposerVC = MFMailComposeViewController()
+        //View is dismissed via view controller
+        mailComposerVC.mailComposeDelegate = self
+        //Pass user's input text to be written to report document
+        let report = produceFinalImage()
+        //Loop through images to attach to email after converting to png
+        for pic in attachedPhotos {
+            mailComposerVC.addAttachmentData(UIImagePNGRepresentation(pic)!, mimeType: "image/png", fileName: "")
+        }
+        //Convert report image to png
+        let imageData = UIImagePNGRepresentation(report)
+        //Attach report to email
+        mailComposerVC.addAttachmentData(imageData!, mimeType: "image/png", fileName: "violation images")
         mailComposerVC.setToRecipients(["iperfitt@umich.edu"])
-        mailComposerVC.setSubject("Hello")
-        mailComposerVC.setMessageBody("How are you doing?", isHTML: false)
+        mailComposerVC.setSubject("ET Rover Pipeline Violation")
         return mailComposerVC
     }
     
+    //Displays error if email is not able to be sent
     func showMailError() {
-        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
-        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        //Initialize alert controller
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "", preferredStyle: .alert)
+        //Allow user to dismiss alert pop up
+        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
         sendMailErrorAlert.addAction(dismiss)
+        //Display alert to user
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
+    //Tells the delegate that the user wants to dismiss the mail composition view.
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    //IMAGE UPLOAD
-    
+    //Called when user decides to import an image from phone to attach to report
     @IBAction func importImage(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
+        //Pick image from photo library
         image.sourceType = UIImagePickerControllerSourceType.photoLibrary
         image.allowsEditing = false
         self.present(image, animated: true) {
-            //After it is complete
-            }
         }
+    }
     
     
-    //TAKE A PHOTO FOR ATTACHMENT
+    //Called when user decides to take a photo to attach to report
     @IBAction func TakePhoto(_ sender: Any) {
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = .camera
         image.allowsEditing = false
         self.present(image, animated: true) {
-            //After it is complete
         }
     }
-        func imagePickerController(_ image: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-            
-            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                attachedPhotos.append(image)
-            }
-            else {
-                //Error message
-                print("Error occured picking image")
-            }
-            self.dismiss(animated: true, completion: nil)
-        }
     
-    //Obtaining location
+    //Called once the user selects an image
+    func imagePickerController(_ image: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //Unpack the image from the info dict
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            //Add image to attachedPhotos array
+            attachedPhotos.append(image)
+        }
+        else {
+            //Error message
+            print("Error occured picking image")
+        }
+        //Dismiss the view controller
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //Obtain phone location
     let manager = CLLocationManager()
     
     //Called every single time the user changes its position
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
         let location = locations[0]
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
@@ -211,15 +236,18 @@ class ETRoverDocumentController: UIViewController, MFMailComposeViewControllerDe
         super.viewDidLoad()
         self.DateOfReport.delegate = self as? UITextFieldDelegate
         manager.delegate = self
+        //Use the highest level of accuracy for location data
         manager.desiredAccuracy = kCLLocationAccuracyBest
+        //Requests permission to use location services while the app is in the foreground.
         manager.requestWhenInUseAuthorization()
+        //Starts the generation of updates that report the user’s current location.
         manager.startUpdatingLocation()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     //Hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
